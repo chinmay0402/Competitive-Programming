@@ -62,6 +62,11 @@ void readv(vector< T > &oneD,ll n){
   oneD.push_back(x);
  }
 }
+
+#define iread1(n) ll n;read(n);
+#define iread1(n,m) ll n,m;read(n,m);
+#define iread3(x,y,z) ll x,y,z;read(x,y,z);
+
 ll gcd(ll a, ll b){
  if(a==0)
   return b;
@@ -105,6 +110,18 @@ ll pwrm(ll a, ll b, ll m){
  return res;
 }
 
+ll pwrm_which_works_too(ll a, ll b, ll m){
+ a%=m;
+ if(a==0)
+  return 0;
+ else if(b==0)
+  return 1;
+ else if(b&1)
+  return (a*pwrm(a,b/2,m)%m*pwrm(a,b/2,m)%m)%m;
+ else
+  return (pwrm(a,b/2,m)%m*pwrm(a,b/2,m)%m)%m;
+}
+
 vector<bool>sieve(1000000,true);
 void Sieve(){
  sieve[0]=false;
@@ -139,5 +156,14 @@ void Sieve_spf(){
 
 
 int main(){
+ 
+ #ifdef ENABLE_FILE_IO
+ freopen("in", "r", stdin);
+ freopen("out", "w", stdout);
+ #endif
+
+ //START OF PROGRAM LOGIC
+ 
+ //END OF PROGRAM LOGIC
  return 0;
 }
