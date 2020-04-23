@@ -122,6 +122,19 @@ ll pwrm_which_works_too(ll a, ll b, ll m){
   return (pwrm(a,b/2,m)%m*pwrm(a,b/2,m)%m)%m;
 }
 
+ll no_of_divisors(ll n){ 
+ ll c = 0; 
+ for (ll i = 1; i <= sqrt(n); i++) { 
+  if (n % i == 0){ 
+   if(n/i==i)
+    c=c+1;
+   else
+    c=c+2;
+  }
+ }
+ return c; 
+} 
+
 vector<bool>sieve(1000000,true);
 void Sieve(){
  sieve[0]=false;
