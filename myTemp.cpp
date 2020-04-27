@@ -27,6 +27,7 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define test ll t;cin>>t;while(t--)
 #define sortv(v) sort(v.begin(),v.end())
 #define max3(a,b,c) max(a,max(b,c))
+#define lcm(a,b) (a*b/__gcd(a,b))
 
 #define forn(i,n) for(ll i=0;i<n;i++)
 #define for1(i,n) for(ll i=1;i<=n;i++)
@@ -64,7 +65,7 @@ void readv(vector< T > &oneD,ll n){
 }
 
 #define iread1(n) ll n;read(n);
-#define iread1(n,m) ll n,m;read(n,m);
+#define iread2(n,m) ll n,m;read(n,m);
 #define iread3(x,y,z) ll x,y,z;read(x,y,z);
 
 ll gcd(ll a, ll b){
