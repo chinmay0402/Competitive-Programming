@@ -28,6 +28,10 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define sortv(v) sort(v.begin(),v.end())
 #define max3(a,b,c) max(a,max(b,c))
 #define lcm(a,b) (a*b/__gcd(a,b))
+#define all(a) a.begin(),a.end()
+#define sz(a) a.size();
+#define present(c,x) (c.find(x)!=c.end());
+#define c_sum accumulate(all(c),(ll)0);
 
 #define forn(i,n) for(ll i=0;i<n;i++)
 #define for1(i,n) for(ll i=1;i<=n;i++)
@@ -168,6 +172,18 @@ void Sieve_spf(){
      sieve[j]=i;
 }
 
+bool oppositeSigns(ll x,ll y) 
+{ 
+  return ((x^y)<0); 
+} 
+
+bool isInt(ll a, ll b){
+ if((lld)a/(lld)b==a/b)
+  return true;
+ else
+  return false;
+}
+
 
 int main(){
  
@@ -179,5 +195,6 @@ int main(){
  //START OF PROGRAM LOGIC
  
  //END OF PROGRAM LOGIC
+
  return 0;
 }
