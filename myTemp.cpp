@@ -67,6 +67,16 @@ void readv(vector< T > &oneD,ll n){
   oneD.push_back(x);
  }
 }
+vll graph[100001];
+template<typename T>
+void readg(vector< T >graph[100001], ll n){
+ forn(i,n){
+  ll x,y;
+  cin>>x>>y;
+  graph[x].pb(y);
+  graph[y].pb(x);
+ }
+}
 
 #define iread1(n) ll n;read(n);
 #define iread2(n,m) ll n,m;read(n,m);
