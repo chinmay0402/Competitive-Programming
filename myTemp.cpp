@@ -23,7 +23,7 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define INF (ll)10000000000000000
 #define MOD (ll)1000000007
 #define pb push_back
-#define mll map<ll,ll>
+#define msl map<string,ll>
 #define test ll t;cin>>t;while(t--)
 #define sortv(v) sort(v.begin(),v.end())
 #define max3(a,b,c) max(a,max(b,c))
