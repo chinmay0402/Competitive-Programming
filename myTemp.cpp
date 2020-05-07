@@ -29,7 +29,7 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define max3(a,b,c) max(a,max(b,c))
 #define lcm(a,b) (a*b/__gcd(a,b))
 #define all(a) a.begin(),a.end()
-#define sz(a) a.size();
+#define sz(a) a.size()
 #define present(c,x) (c.find(x)!=c.end());
 #define c_sum accumulate(all(c),(ll)0);
 
