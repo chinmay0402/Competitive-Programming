@@ -1,5 +1,5 @@
 //author: chinmay0402
-//One day your whole life will flash before your eyes, make sure you make it worth watching
+//Gotta beat them all!!
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -167,19 +167,19 @@ void Sieve_spf(){
  ll n=1000001;
  
  forn(i,n)
-  sieve[i]=i;
+  sieve_spf[i]=i;
  
- sieve[0]=-1;
- sieve[1]=-1;
+ sieve_spf[0]=-1;
+ sieve_spf[1]=-1;
  
  forab(i,2,n,2)
-  sieve[i]=2;
+  sieve_spf[i]=2;
  
  forab(i,3,n,2)
-  if(sieve[i]==i)
+  if(sieve_spf[i]==i)
    forab(j,i*i,n,i)
-    if(sieve[j]==j)
-     sieve[j]=i;
+    if(sieve_spf[j]==j)
+     sieve_spf[j]=i;
 }
 
 bool oppositeSigns(ll x,ll y) 
