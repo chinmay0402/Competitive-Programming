@@ -2,7 +2,7 @@
 //One day your whole life will flash before your eyes, make sure you make it worth watching
 #include<bits/stdc++.h>
 using namespace std;
-// g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
+
 //policy based data structures
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
@@ -167,19 +167,19 @@ void Sieve_spf(){
  ll n=1000001;
  
  forn(i,n)
-  sieve_spf[i]=i;
+  sieve[i]=i;
  
- sieve_spf[0]=-1;
- sieve_spf[1]=-1;
+ sieve[0]=-1;
+ sieve[1]=-1;
  
  forab(i,2,n,2)
-  sieve_spf[i]=2;
+  sieve[i]=2;
  
  forab(i,3,n,2)
-  if(sieve_spf[i]==i)
+  if(sieve[i]==i)
    forab(j,i*i,n,i)
-    if(sieve_spf[j]==j)
-     sieve_spf[j]=i;
+    if(sieve[j]==j)
+     sieve[j]=i;
 }
 
 bool oppositeSigns(ll x,ll y) 
@@ -194,15 +194,36 @@ bool isInt(ll a, ll b){
   return false;
 }
 
+
 int main(){
  
  #ifdef ENABLE_FILE_IO
  freopen("in", "r", stdin);
  freopen("out", "w", stdout);
  #endif
-
+//kat gya yaar constraints dekhe hi nai contest ke time
+// Edit: Ab bhi nai ho rha...... :/
+// Edit 2: HO GAYA!
  //START OF PROGRAM LOGIC
- 
+ test{
+  iread1(n);
+  ll a[n],c[n+1]={0};
+  reada(a,n);
+  ll ans=0,sum;
+  forn(i,n)
+   c[a[i]]++;
+  forn(i,n){
+   sum=a[i];
+   forab(j,i+1,n-1,1){
+    sum+=a[j];
+    if(sum<=n && c[sum]!=0){
+     ans+=c[sum];
+     c[sum]=0;
+    }
+   }
+  }
+  cout<<ans<<"\n";
+ }
  //END OF PROGRAM LOGIC
 
  return 0;

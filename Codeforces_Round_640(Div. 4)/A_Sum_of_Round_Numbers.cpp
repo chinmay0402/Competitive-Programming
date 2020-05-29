@@ -2,7 +2,7 @@
 //One day your whole life will flash before your eyes, make sure you make it worth watching
 #include<bits/stdc++.h>
 using namespace std;
-// g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
+
 //policy based data structures
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
@@ -167,19 +167,19 @@ void Sieve_spf(){
  ll n=1000001;
  
  forn(i,n)
-  sieve_spf[i]=i;
+  sieve[i]=i;
  
- sieve_spf[0]=-1;
- sieve_spf[1]=-1;
+ sieve[0]=-1;
+ sieve[1]=-1;
  
  forab(i,2,n,2)
-  sieve_spf[i]=2;
+  sieve[i]=2;
  
  forab(i,3,n,2)
-  if(sieve_spf[i]==i)
+  if(sieve[i]==i)
    forab(j,i*i,n,i)
-    if(sieve_spf[j]==j)
-     sieve_spf[j]=i;
+    if(sieve[j]==j)
+     sieve[j]=i;
 }
 
 bool oppositeSigns(ll x,ll y) 
@@ -194,6 +194,7 @@ bool isInt(ll a, ll b){
   return false;
 }
 
+
 int main(){
  
  #ifdef ENABLE_FILE_IO
@@ -202,7 +203,24 @@ int main(){
  #endif
 
  //START OF PROGRAM LOGIC
- 
+ test{
+  iread1(n);
+  ll k=0;
+  sll s;
+  while(n){
+   s.insert((n%10)*pwr(10,k));
+   n/=10;
+   k++;
+  }
+  if(s.find(0)==s.end())
+   cout<<s.size()<<"\n";
+  else
+   cout<<s.size()-1<<"\n";
+  for(auto x:s)
+   if(x!=0)
+    cout<<x<<" ";
+  cout<<"\n";
+ }
  //END OF PROGRAM LOGIC
 
  return 0;
