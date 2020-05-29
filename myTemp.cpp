@@ -2,7 +2,7 @@
 //One day your whole life will flash before your eyes, make sure you make it worth watching
 #include<bits/stdc++.h>
 using namespace std;
-
+// g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
 //policy based data structures
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
@@ -193,7 +193,6 @@ bool isInt(ll a, ll b){
  else
   return false;
 }
-
 
 int main(){
  
