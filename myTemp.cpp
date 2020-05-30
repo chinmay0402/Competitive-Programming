@@ -32,6 +32,7 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define sz(a) a.size()
 #define present(c,x) (c.find(x)!=c.end());
 #define c_sum accumulate(all(c),(ll)0);
+#define count_ones(x) __builtin_popcountll(x)
 
 #define forn(i,n) for(ll i=0;i<n;i++)
 #define for1(i,n) for(ll i=1;i<=n;i++)
