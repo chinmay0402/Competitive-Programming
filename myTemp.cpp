@@ -1,5 +1,4 @@
 //author: chinmay0402
-//One day your whole life will flash before your eyes, make sure you make it worth watching
 #include<bits/stdc++.h>
 using namespace std;
 // g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
@@ -9,7 +8,7 @@ using namespace __gnu_pbds;
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> indexed_set;
 
 #define ll long long int
-#define lld long double
+#define ld long double
 #define fl float
 #define vs vector<string>
 #define vll vector<ll>
@@ -195,8 +194,20 @@ bool isInt(ll a, ll b){
   return false;
 }
 
+struct CustomComp {
+  bool operator() (const ll& a, const ll& b) const
+  {return a<b;}  // {return a<b;} can be replaced by {return f(a)<f(b);}
+  // Usage:set<ll,CustomComp>s;   and similarly for maps, etc.
+};
+
+// Lambda expression for custom sort
+auto comp = [](ll a, ll b) { return a < b; }; // {return a<b;} can be replaced by {return f(a)<f(b);}
+// Usage : map<ll,ll,decltype(comp)>mp(comp);    and similarly for set, etc;
+
 int main(){
- 
+
+ // Work like there is someone working 24 hours a day to take it all away from you.
+
  #ifdef ENABLE_FILE_IO
  freopen("in", "r", stdin);
  freopen("out", "w", stdout);
