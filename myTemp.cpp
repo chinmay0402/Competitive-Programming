@@ -213,7 +213,7 @@ int main(){
  freopen("out", "w", stdout);
  #endif
 
-//  g++ -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -o 
+ // g++ -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -o 
 
  //START OF PROGRAM LOGIC
  
