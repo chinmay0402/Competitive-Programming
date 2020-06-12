@@ -1,6 +1,10 @@
 //author: chinmay0402
 #include<bits/stdc++.h>
 using namespace std;
+<<<<<<< HEAD
+=======
+// g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
+>>>>>>> 129c2b43bcf39024241a419f3e2bc4576ab80c78
 //policy based data structures
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
@@ -31,8 +35,11 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define present(c,x) (c.find(x)!=c.end());
 #define c_sum accumulate(all(c),(ll)0);
 #define count_ones(x) __builtin_popcountll(x)
+<<<<<<< HEAD
 #define doom cout<<"doom\n"
 #define debug(x) cerr<<#x<<"->"<<x<<"\n";
+=======
+>>>>>>> 129c2b43bcf39024241a419f3e2bc4576ab80c78
 
 #define forn(i,n) for(ll i=0;i<n;i++)
 #define for1(i,n) for(ll i=1;i<=n;i++)
