@@ -1,15 +1,13 @@
 //author: chinmay0402
-//Gotta beat them all!!
 #include<bits/stdc++.h>
 using namespace std;
-
 //policy based data structures
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> indexed_set;
 
 #define ll long long int
-#define lld long double
+#define ld long double
 #define fl float
 #define vs vector<string>
 #define vll vector<ll>
@@ -19,7 +17,7 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define scd second
 #define sll set<ll>
 #define mll map<ll,ll>
-#define flash ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define flash ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define INF (ll)10000000000000000
 #define MOD (ll)1000000007
 #define pb push_back
@@ -32,6 +30,9 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define sz(a) a.size()
 #define present(c,x) (c.find(x)!=c.end());
 #define c_sum accumulate(all(c),(ll)0);
+#define count_ones(x) __builtin_popcountll(x)
+#define doom cout<<"doom\n"
+#define debug(x) cerr<<#x<<"->"<<x<<"\n";
 
 #define forn(i,n) for(ll i=0;i<n;i++)
 #define for1(i,n) for(ll i=1;i<=n;i++)
@@ -67,7 +68,6 @@ void readv(vector< T > &oneD,ll n){
   oneD.push_back(x);
  }
 }
-vll graph[100001];
 template<typename T>
 void readg(vector< T >graph[100001], ll n){
  forn(i,n){
@@ -188,23 +188,36 @@ bool oppositeSigns(ll x,ll y)
 } 
 
 bool isInt(ll a, ll b){
- if((lld)a/(lld)b==a/b)
+ if((ld)a/(ld)b==a/b)
   return true;
  else
   return false;
 }
 
+struct CustomComp {
+  bool operator() (const ll& a, const ll& b) const
+  {return a<b;}  // {return a<b;} can be replaced by {return f(a)<f(b);}
+  // Usage:set<ll,CustomComp>s;   and similarly for maps, etc.
+};
+
+// Lambda expression for custom sort
+auto comp = [](ll a, ll b) { return a < b; }; // {return a<b;} can be replaced by {return f(a)<f(b);}
+// Usage : map<ll,ll,decltype(comp)>mp(comp);    and similarly for set, etc;
 
 int main(){
- 
+
+ // Work like there is someone working 24 hours a day to take it all away from you.
+
  #ifdef ENABLE_FILE_IO
  freopen("in", "r", stdin);
  freopen("out", "w", stdout);
  #endif
 
+//  g++ -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -o 
+
  //START OF PROGRAM LOGIC
  
  //END OF PROGRAM LOGIC
-
+ cerr<<"Time : "<<1000*((double)clock())/(double)CLOCKS_PER_SEC<<"ms\n";
  return 0;
 }
