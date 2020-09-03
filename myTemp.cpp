@@ -1,7 +1,6 @@
 //author: chinmay0402
 #include<bits/stdc++.h>
 using namespace std;
-// g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
 //policy based data structures
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
@@ -18,7 +17,7 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define scd second
 #define sll set<ll>
 #define mll map<ll,ll>
-#define flash ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define flash ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define INF (ll)10000000000000000
 #define MOD (ll)1000000007
 #define pb push_back
@@ -32,6 +31,8 @@ typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_
 #define present(c,x) (c.find(x)!=c.end());
 #define c_sum accumulate(all(c),(ll)0);
 #define count_ones(x) __builtin_popcountll(x)
+#define doom cout<<"doom\n"
+#define debug(x) cerr<<#x<<"->"<<x<<"\n";
 
 #define forn(i,n) for(ll i=0;i<n;i++)
 #define for1(i,n) for(ll i=1;i<=n;i++)
@@ -67,7 +68,6 @@ void readv(vector< T > &oneD,ll n){
   oneD.push_back(x);
  }
 }
-vll graph[100001];
 template<typename T>
 void readg(vector< T >graph[100001], ll n){
  forn(i,n){
@@ -188,7 +188,7 @@ bool oppositeSigns(ll x,ll y)
 } 
 
 bool isInt(ll a, ll b){
- if((lld)a/(lld)b==a/b)
+ if((ld)a/(ld)b==a/b)
   return true;
  else
   return false;
@@ -213,9 +213,11 @@ int main(){
  freopen("out", "w", stdout);
  #endif
 
+ // g++ -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -o 
+
  //START OF PROGRAM LOGIC
  
  //END OF PROGRAM LOGIC
-
+ cerr<<"Time : "<<1000*((double)clock())/(double)CLOCKS_PER_SEC<<"ms\n";
  return 0;
 }
